@@ -1,0 +1,6 @@
+package com.onerivet.userbook.service;
+
+public class EmployeeImplies implements EmployeeService {
+
+	
+}

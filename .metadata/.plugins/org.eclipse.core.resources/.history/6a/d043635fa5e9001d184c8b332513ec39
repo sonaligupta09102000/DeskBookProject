@@ -1,0 +1,13 @@
+package com.onerivet.userbook.model;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+public class Role {
+	
+	@Id
+	@GeneratedValue(strategy = )
+	private int id;
+	private String RoleName;
+
+}

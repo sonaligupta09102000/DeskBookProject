@@ -1,0 +1,16 @@
+package com.onerivet.userbook.entity;
+
+public class Employee {
+	
+	private int EmployeeId;
+	private String UserId;
+	private String EmailId;
+	private String FirstName;
+	private String LastName;
+	private String PhoneNumber;
+	private String Project;
+	private String ProfilePictureFileName;
+	private String ProfilePictureFilePath;
+	
+
+}

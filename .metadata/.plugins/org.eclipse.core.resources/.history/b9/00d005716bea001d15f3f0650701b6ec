@@ -1,0 +1,10 @@
+package com.onerivet.userbook.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.onerivet.userbook.model.entity.Employee;
+import com.onerivet.userbook.model.payload.EmployeeDto;
+
+public interface EmployeeRepsitory extends JpaRepository<Employee, Integer>{
+
+	
+}

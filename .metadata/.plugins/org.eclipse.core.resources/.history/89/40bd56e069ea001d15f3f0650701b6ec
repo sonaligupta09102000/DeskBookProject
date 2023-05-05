@@ -1,0 +1,5 @@
+package com.onerivet.userbook.service;
+
+public interface EmployeeService {
+
+}

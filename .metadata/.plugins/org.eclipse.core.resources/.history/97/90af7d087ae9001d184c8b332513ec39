@@ -1,0 +1,20 @@
+package com.onerivet.userbook.entity;
+
+import jakarta.persistence.Id;
+
+public class Employee {
+	
+	@Id
+	
+	private int EmployeeId;
+	private String UserId;
+	private String EmailId;
+	private String FirstName;
+	private String LastName;
+	private String PhoneNumber;
+	private String Project;
+	private String ProfilePictureFileName;
+	private String ProfilePictureFilePath;
+	
+
+}

@@ -1,0 +1,5 @@
+spring.datsource.url=jdbc:sqlserver://localhost:1433;databaseName="DeskBookDev";encrypt=false
+spring.datasource.username=sa
+spring.datasource.password=Admin#123
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql=true

@@ -1,0 +1,15 @@
+package com.onerivet.userbook.service;
+
+import java.util.List;
+
+import com.onerivet.userbook.model.entity.Employee;
+
+public interface EmployeeService {
+
+//	public String addEmployee(EmployeeDto employeeDto);
+
+	public List<Employee> getAllEmployee();
+	
+	
+
+}

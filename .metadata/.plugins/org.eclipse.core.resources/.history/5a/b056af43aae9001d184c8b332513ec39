@@ -1,0 +1,15 @@
+package com.onerivet.userbook.model.payload;
+
+public class EmployeeDto {
+	
+	private int id;
+	private String userId;
+	private String emailId;
+	private String firstName;
+	private String lastName;
+	private String phoneNumber;
+	private String project;
+	private String profilePictureFileName;
+	private String profilePictureFilePath;
+
+}

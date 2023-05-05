@@ -1,0 +1,37 @@
+package com.onerivet.userbook.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.onerivet.userbook.model.entity.Employee;
+import com.onerivet.userbook.model.payload.EmployeeDto;
+import com.onerivet.userbook.service.EmployeeService;
+
+@RestController
+@RequestMapping("/employees")
+public class EmployeeController {
+	
+	@Autowired
+	private EmployeeService employeeService;
+	
+	@PostMapping("/add-emp")
+	public String addemployees(@RequestBody EmployeeDto employeeDto)
+	{
+		employeeService.addEmployee(employeeDto);
+		return "Added Successfully";
+	}
+	
+	@GetMapping("/get-all-emp")
+	public List<Employee> getallemployee()
+	{
+		return employeeService.getAllEmployee();
+	}
+
+	
+}

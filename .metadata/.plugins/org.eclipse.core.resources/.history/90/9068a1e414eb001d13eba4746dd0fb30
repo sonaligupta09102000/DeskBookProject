@@ -1,0 +1,53 @@
+package com.onerivet.userbook.service;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.onerivet.userbook.model.entity.Employee;
+import com.onerivet.userbook.model.payload.EmployeeDto;
+import com.onerivet.userbook.repository.EmployeeRepsitory;
+
+@Service
+public class EmployeeImplies implements EmployeeService {
+	
+	@Autowired
+	private EmployeeRepsitory employeeRepsitory;
+	
+	@Autowired
+	private ModelMapper modelMapper;
+	
+	
+	//Entity to DTO
+	public EmployeeDto employeetoemployeedto(Employee employee)
+	{
+		EmployeeDto employeeDto = this.modelMapper.map(employee, EmployeeDto.class);
+		return employeeDto;
+	}
+	
+	//DTO to Entity
+	public Employee employeedtotoemployee(EmployeeDto employeeDto)
+	{
+		Employee employee = this.modelMapper.map(employeeDto, Employee.class);
+		return employee;
+	}
+
+//	@Override
+//	public String addEmployee(EmployeeDto employee) {
+//		// TODO Auto-generated method stub
+//		Employee employee2 = this.employeedtotoemployee(employee);
+//		employeeRepsitory.save(employee2);
+//		return "SuccessFully Added";
+//	}
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		List<Employee> findAll = employeeRepsitory.findAll();
+		return findAll;//.stream().map(x->employeetoemployeedto(x)).collect(Collectors.toList());
+	}
+
+	
+}

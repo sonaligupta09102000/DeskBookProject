@@ -1,0 +1,5 @@
+package com.onerivet.userbook.entity;
+
+public class WorkingDay {
+
+}
